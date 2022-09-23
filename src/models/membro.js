@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const membroSchema = new mongoose.Schema(
     {
-        id: {type: String},
+        id: {type: String, required:true},
         nome:{type: String, required:true},
         email:{type: String, required:true},
         senha:{type: String, required:true},
