@@ -8,6 +8,19 @@ class MembroController{
         })
     }
 
+    static cadastrarMembro = (req,res) => {
+        let livro = new membros(req.body);
+
+        livro.save((err)=>{
+            if(err){
+                res.status(500).send({message:`${err.message} - falha ao cadastrar!`})
+            }
+            else{
+                res.status(201).send(livro.toJSON());
+            }
+        })
+    }
+
 }
 
 export default MembroController

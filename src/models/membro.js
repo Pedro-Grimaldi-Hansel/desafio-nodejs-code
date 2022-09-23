@@ -2,13 +2,13 @@ import mongoose from "mongoose";
 
 const membroSchema = new mongoose.Schema(
     {
-        id: {type: String, required:true},
-        nome:{type: String, required:true},
-        email:{type: String, required:true},
-        senha:{type: String, required:true},
-        aniversario:{type: String, required:true},
-        departamento:{type: String, required:true},
-        cargo:{type: String, required:true},
+        id: {type: String},
+        nome:{type: String},
+        email:{type: String},
+        senha:{type: String},
+        aniversario:{type: String},
+        departamento:{type: String},
+        cargo:{type: String},
     }
 );
 

@@ -3,7 +3,7 @@ import membros from "./membrosRoutes.js";
 
 const routes =(app) => {
     app.route("/").get((req,res)=>{
-        res.status(200);
+        res.status(200).send('Bem vindo!');
     })
 
     app.use(

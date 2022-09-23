@@ -6,4 +6,6 @@ const router = express.Router();
 router
     .get("/membros",Membrocontroller.listarMembros)
 
+    .post("/membros", Membrocontroller.cadastrarMembro)
+
 export default router;
