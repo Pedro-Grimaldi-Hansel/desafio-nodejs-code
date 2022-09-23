@@ -1,5 +1,5 @@
 import express from "express";
-import membros from "../models/membro.js";
+import membros from "./membrosRoutes.js";
 
 const routes =(app) => {
     app.route("/").get((req,res)=>{

@@ -1,4 +1,4 @@
-import membros from "../models/membro";
+import membros from "../models/membro.js";
 
 class MembroController{
 
@@ -10,4 +10,4 @@ class MembroController{
 
 }
 
-export default Membrocontroller
+export default MembroController

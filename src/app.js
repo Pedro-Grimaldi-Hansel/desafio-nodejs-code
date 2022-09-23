@@ -14,16 +14,7 @@ const app = express();
 
 app.use(express.json())
 
-app.get('/', (req, res) => {
-    res.status(200).send('Curso de Node');
-  }) 
-  
-  app.get('/membros', (req, res) => {
-    membros.find((err, membros) => {
-      res.status(200).json(membros)
-    })
-  
-  })
+routes(app);
   
   app.get('/membros/:id', (req, res) => {
     let index = buscaLivro(req.params.id);
