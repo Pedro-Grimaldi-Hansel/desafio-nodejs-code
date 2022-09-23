@@ -1,14 +1,21 @@
 import express from 'express'
+import db from './config/dbConnect.js';
+import membros from './models/membro.js';
 import cors from "cors";
+
+db.on("error", console.log.bind(console, 'Erro de conexão!'));
+db.once("open",()=>{
+  console.log('conexão com o banco estabelecida!')
+})
 
 const app = express();
 
 app.use(express.json())
 
-const membros =[
-  {"id": 1, "nome":"Pedro Grimaldi Hansel", "email":"pedroghansel@gmail.com"},
-  {"id": 2, "nome":"Pedri Grimaldi Hansel", "email":"pedroghansel2@gmail.com"},
-]
+//const membros =[
+//  {"id": 1, "nome":"Pedro Grimaldi Hansel", "email":"pedroghansel@gmail.com", "senha":"1234","aniversario":"13/06/2003","departamento":
+//  " projetos", "cargo":"acessor"},
+//]
 
 app.use(express.json());
 app.use(cors({
@@ -22,8 +29,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('/membros', (req, res) => {
-  console.log("GET /");
-  res.status(200).json(membros)
+  membros.find((err,membros)=>{
+      res.status(200).json(membros)
+  })
 });
 
 app.get('/membros/:id',(req, res)=>{        //exibe os membros
