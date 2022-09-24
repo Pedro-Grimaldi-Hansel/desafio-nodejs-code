@@ -11,4 +11,5 @@ router
 
     .put("/membros/:id", Membrocontroller.atualizarMembro)
 
+    .delete("/membros/:id", Membrocontroller.excluirMembro)
 export default router;

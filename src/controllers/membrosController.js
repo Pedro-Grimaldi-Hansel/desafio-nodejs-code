@@ -42,10 +42,24 @@ class MembroController{
                 res.status(200).send({message:'Membro atualizado!'})
             }
             else{
-                res.status(500).send({message: err.message})
+                res.status(500).send({message:`${err.message} - falha ao atualizar!`})
             }
         })
     }
+
+    static excluirMembro = (req, res) =>{
+        const id = req.params.id;
+
+        membros.findByIdAndDelete(id, (err)=>{
+            if(!err){
+                res.status(200).send({message: 'Membro deletado!'})
+            }
+            else{
+                res.status(500).send({message:`${err.message} - falha ao deletar!`})
+            }
+        })
+    }
+
 }
 
 export default MembroController
