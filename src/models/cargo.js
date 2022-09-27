@@ -4,6 +4,9 @@ const cargoSchema = new mongoose.Schema(
     {
         id: {type: String},
         nome:{type: String},
+    },
+    {
+        versionKey: false
     }
 );
 

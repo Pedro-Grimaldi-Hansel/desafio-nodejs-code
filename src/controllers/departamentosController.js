@@ -13,7 +13,7 @@ class DepartamentoController{
 
         departamentos.findById(id,(err,departamentos)=>{
             if(err){
-                res.status(400).send({message: `${err.message} - Id do livro não localizado!`})
+                res.status(400).send({message: `${err.message} - Id do departamento não localizado!`})
             }
             else{
                 res.status(200).json(departamentos);

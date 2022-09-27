@@ -9,6 +9,9 @@ const membroSchema = new mongoose.Schema(
         aniversario:{type: String},
         departamento:{type: String},
         cargo:{type: String},
+    },
+    {
+        versionKey: false
     }
 );
 
