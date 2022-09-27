@@ -1,9 +1,10 @@
+import departamentos from "../models/departamento.js";
 import membros from "../models/membro.js";
 
 class MembroController{
 
     static listarMembros = (req, res) => {      //exibe todos os membros
-        membros.find((err,membros)=>{
+        membros.find().populate('departamento').exec((err,membros)=>{
             res.status(200).json(membros)
         })
     }

@@ -11,7 +11,7 @@ class DepartamentoController{
     static listarDepartamentoPorId = (req, res) => {      //exibe o departamento pelo id
         const id = req.params.id;
 
-        departamentos.findById(id,(err,departamentos)=>{
+        departamentos.findById(id, (err,departamentos)=> {
             if(err){
                 res.status(400).send({message: `${err.message} - Id do departamento não localizado!`})
             }
