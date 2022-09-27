@@ -1,5 +1,6 @@
 import express from "express";
 import membros from "./membrosRoutes.js";
+import departamentos from "./departamentosRoutes.js";
 
 const routes =(app) => {
     app.route("/").get((req,res)=>{
@@ -8,7 +9,8 @@ const routes =(app) => {
 
     app.use(
         express.json(),
-        membros
+        membros,
+        departamentos
     )
 }
 

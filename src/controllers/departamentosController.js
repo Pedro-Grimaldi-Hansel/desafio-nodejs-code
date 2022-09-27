@@ -1,4 +1,4 @@
-import departamentos from "../models/departamento"
+import departamentos from "../models/departamento.js"
 
 class DepartamentoController{
 

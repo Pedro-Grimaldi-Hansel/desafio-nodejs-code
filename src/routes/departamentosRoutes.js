@@ -1,15 +1,15 @@
 import express from "express";
-import DepartamentoController from "../controllers/departamentosController";
+import DepartamentoController from "../controllers/departamentosController.js";
 
 const router = express.Router();
 
 router
-    .get("/membros",DepartamentoController.listarDepartamentos)
-    .get("/membros/:id", DepartamentoController.listarDepartamentoPorId)
+    .get("/departamentos",DepartamentoController.listarDepartamentos)
+    .get("/departamentos/:id", DepartamentoController.listarDepartamentoPorId)
 
-    .post("/departamentoss", DepartamentoController.cadastrarDepartamento)
+    .post("/departamentos", DepartamentoController.cadastrarDepartamento)
 
-    .put("/departamentoss/:id", DepartamentoController.atualizarDepartamento)
+    .put("/departamentos/:id", DepartamentoController.atualizarDepartamento)
 
-    .delete("/departamentoss/:id", DepartamentoController.excluirDepartamento)
+    .delete("/departamentos/:id", DepartamentoController.excluirDepartamento)
 export default router;
