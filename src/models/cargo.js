@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 
 const cargoSchema = new mongoose.Schema(
     {
-        id: {type: String, required:true},
-        nome:{type: String, required:true},
+        id: {type: String},
+        nome:{type: String},
     }
 );
 
