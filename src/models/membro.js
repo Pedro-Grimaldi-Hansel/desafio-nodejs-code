@@ -8,7 +8,7 @@ const membroSchema = new mongoose.Schema(
         senha:{type: String},
         aniversario:{type: String},
         departamento:{type: mongoose.Schema.Types.ObjectId, ref: 'departamentos'},
-        cargo:{type: mongoose.Schema.Types.ObjectId, ref: 'cargos'},
+        cargo:{type: mongoose.Schema.Types.ObjectId, ref: 'cargos'}
     },
     {
         versionKey: false

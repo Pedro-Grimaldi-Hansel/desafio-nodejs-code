@@ -4,7 +4,10 @@ import membros from "../models/membro.js";
 class MembroController{
 
     static listarMembros = (req, res) => {      //exibe todos os membros
-        membros.find().populate('departamento').exec((err,membros)=>{
+        membros.find().
+        populate('departamento').
+        populate('cargo').
+        exec((err,membros)=>{
             res.status(200).json(membros)
         })
     }
@@ -12,7 +15,8 @@ class MembroController{
     static listarMembroPorId = (req, res) => {      //exibe todos os membros
         const id = req.params.id;
 
-        membros.findById(id,(err,membros)=>{
+        membros.findById(id).populate('departamento').
+        populate('cargo').exec((err,membros)=>{
             if(err){
                 res.status(400).send({message: `${err.message} - Id do membro não localizado!`})
             }
@@ -60,6 +64,8 @@ class MembroController{
             }
         })
     }
+
+    static listarPorDepartamento 
 
 }
 
