@@ -32,6 +32,9 @@ app.post('/auth/register', async(req,res)=>{
   if(password !== confirmpassword){
     return res.status(422),json({msg: 'As senhas não conferem!'})
   }
+
+  
+
 })
 
   export default app
