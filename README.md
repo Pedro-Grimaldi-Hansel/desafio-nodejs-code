@@ -5,5 +5,5 @@
     
     Descrição do Projeto:
         O projeto consiste em construir uma API para um sistema de
-        Empresas Júnior, onde seja possível cadastrar membros, cargos e
+        Empresas Júnior, onde seja possível realizar edição, visualização, adição e remoção de membros, cargos e
         departamentos.
